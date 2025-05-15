@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buy_complements",
+  "info": {
+    "singularName": "buy-complement",
+    "pluralName": "buy-complements",
+    "displayName": "buy_complement",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "complements": {
+      "type": "text"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "buy_status": {
+      "type": "enumeration",
+      "enum": [
+        "pendiente",
+        "aprobado",
+        "cancelado",
+        "en revisión"
+      ],
+      "default": "pendiente"
+    },
+    "installment": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "discount_percentage": {
+      "type": "decimal"
+    },
+    "final_price": {
+      "type": "integer"
+    },
+    "installment_amount": {
+      "type": "integer"
+    },
+    "number_of_guests": {
+      "type": "integer"
+    },
+    "discount_coupon": {
+      "type": "string"
+    },
+    "combo": {
+      "type": "string",
+      "default": "null"
+    }
+  }
+}

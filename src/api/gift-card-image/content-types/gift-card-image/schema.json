@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gift_card_images",
+  "info": {
+    "singularName": "gift-card-image",
+    "pluralName": "gift-card-images",
+    "displayName": "Gift Card Image",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gift_card": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::gift-card.gift-card",
+      "inversedBy": "gift_card_images"
+    },
+    "front_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "back_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "event_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event-type.event-type",
+      "inversedBy": "gift_card_images"
+    }
+  }
+}

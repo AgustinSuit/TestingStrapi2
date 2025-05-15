@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banners",
+  "info": {
+    "singularName": "banner",
+    "pluralName": "banners",
+    "displayName": "banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "principal",
+        "promotions",
+        "test"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "delay": {
+      "type": "integer",
+      "default": 3,
+      "min": 1,
+      "max": 60,
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": false,
+      "unique": false,
+      "min": 0,
+      "max": 500
+    }
+  }
+}

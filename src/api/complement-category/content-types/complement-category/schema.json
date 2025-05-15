@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "complement_categories",
+  "info": {
+    "singularName": "complement-category",
+    "pluralName": "complement-categories",
+    "displayName": "Complement Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "complements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::complemento.complemento",
+      "mappedBy": "complement_category"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 4
+    }
+  }
+}

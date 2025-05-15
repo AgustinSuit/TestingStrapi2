@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buy_giftcards",
+  "info": {
+    "singularName": "buy-giftcard",
+    "pluralName": "buy-giftcards",
+    "displayName": "buy_giftcard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "integer",
+      "required": true
+    },
+    "giverName": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "string"
+    },
+    "guestName": {
+      "type": "string",
+      "required": false
+    },
+    "guestLastName": {
+      "type": "string"
+    },
+    "guestId": {
+      "type": "string"
+    },
+    "idJanosCrm": {
+      "type": "integer",
+      "required": true
+    },
+    "eventId": {
+      "type": "string",
+      "required": true
+    },
+    "giftCardId": {
+      "type": "string",
+      "required": true
+    },
+    "paymentDetails": {
+      "type": "json"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "paymentStatus": {
+      "type": "string",
+      "required": true
+    },
+    "mpPaymentId": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
+    }
+  }
+}

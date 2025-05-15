@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gift_cards",
+  "info": {
+    "singularName": "gift-card",
+    "pluralName": "gift-cards",
+    "displayName": "Gift Card",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "integer",
+      "default": 100,
+      "required": true
+    },
+    "due_date": {
+      "type": "date",
+      "required": true
+    },
+    "gift_card_images": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gift-card-image.gift-card-image",
+      "mappedBy": "gift_card"
+    }
+  }
+}

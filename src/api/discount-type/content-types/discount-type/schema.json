@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discount_types",
+  "info": {
+    "singularName": "discount-type",
+    "pluralName": "discount-types",
+    "displayName": "Discount Type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "discounts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discount.discount",
+      "mappedBy": "discount_type"
+    }
+  }
+}
