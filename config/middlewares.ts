@@ -7,7 +7,11 @@ export default [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:"],
+          "connect-src": [
+            "'self'",
+            "https:",
+            "https://res.cloudinary.com"
+          ],
           "script-src": [
             "'self'",
             "'unsafe-inline'",
@@ -24,6 +28,7 @@ export default [
             "https://*.basemaps.cartocdn.com",
             "https://tile.openstreetmap.org",
             "https://*.tile.openstreetmap.org",
+            "https://res.cloudinary.com"
           ],
           "img-src": [
             "'self'",
@@ -37,6 +42,7 @@ export default [
             "market-assets.strapi.io",
             "https://*.tile.openstreetmap.org",
             "https://unpkg.com/leaflet@1.9.4/dist/images/",
+            "https://res.cloudinary.com"
           ],
         },
       },
